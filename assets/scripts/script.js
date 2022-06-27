@@ -2,7 +2,11 @@ const User = {
 
    name: 'Vasya',
 
-   getName: () => this.name
+   getName() {
+
+      return this.name;
+
+   }
 
 }
 
