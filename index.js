@@ -7,3 +7,10 @@ const User = {
 }
 
 console.log( User.getName() );
+
+
+$(document).ready(function () {
+$('h1').click(function () {
+        $('h2').toggleClass('active');
+    });
+});
