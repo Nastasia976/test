@@ -1,0 +1,205 @@
+@import "_nullstyle";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+._conteiner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+body {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.header {
+    min-width: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
+    &__conteiner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.logo {
+    padding: 20px 0;
+    margin-right: 40px;
+}
+.search-form {
+    padding: 20px 0;
+    flex: 1 1 auto;
+    position: relative;
+    &__input {
+        border: 1px solid #ebebf1;
+        border-radius: 5px;
+        width: 100%;
+        padding: 11px 0 11px 39px;
+        color: #bbc4d6;
+    }
+    &__input::placeholder {
+        color: #bbc4d6;
+        font-size: 14px;
+        line-height: 114.3%;
+    }
+    &__search {
+        position: absolute;
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 0;
+        height: fit-content;
+        background-color: #fff;
+    }
+}
+.user {
+    border-left: 1px solid #ebebf1;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 19px;
+    margin-left: 40px;
+    &__name {
+        color: #768298;
+        letter-spacing: 0.16px;
+        line-height: 120%;
+        margin-right: 10px;
+    }
+    &__foto{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.user-375._hide {
+    display: none;
+}
+.main{
+    padding: 0 20px;
+}
+.partners {
+    margin-top: 70px;
+    &__title {
+        font-weight: 500;
+        font-size: calc(18.8572px + 17.1428 * (100vw / 1440));
+        line-height: 160%;
+        color: #121920;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    &__items {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 270px;
+        height: 120px;
+        margin: 15px;
+        border-radius: 5px;
+        border: 1px solid #EBEBF1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+        img{
+            max-width: 60px;
+        }
+    }
+
+    &__item:hover {
+        box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+        transition: 0.5s;
+    }
+}
+@media (max-width: 1400px) {
+    .partners__items {
+        margin: calc(-4.6667px + (-10) * (100vw / 1440));
+    }
+    .partners__item {
+        margin: calc(4.6667px + (10) * (100vw / 1440));
+    }
+}
+@media(max-width:1200px){
+    .partners__item {
+        width: calc(229px + (270 - 229) * ((100vw - 768px) / (1200 - 768)));
+    }
+}
+@media (max-width: 767px) {
+    .partners__item {
+        width: 46.5%;
+    }
+    .partners__items{
+      justify-content: space-between;
+    }
+    .logo {
+        margin-right: calc(-10px + 40 * (100vw / 767));
+    }
+    .user{
+        margin-left: calc(-10px + 40 * (100vw / 767));
+    }
+}
+@media (max-width: 482px) {
+    .user {
+        display: none;
+    }
+    .user-375._hide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .header__conteiner {
+        flex-wrap: wrap;
+    }
+    .search-form {
+        min-width: 100%;
+        padding: 0;
+        margin: 0 -26px 0 -21px;
+        border-top: 1px solid #bbc4d6;
+        &__input {
+            border: 0;
+            padding: 12px 0 3px 49px;
+        }
+        &__search {
+            left: 24px;
+            top: 12px;
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    .logo {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        margin: 17px 0 16px 0;
+    }
+    .partners__item {
+        width: 45%;
+    }
+}
+@media (max-width: 376px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+    .partners__items{
+        margin: -10px 0;
+    }
+    .partners__item {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+}
